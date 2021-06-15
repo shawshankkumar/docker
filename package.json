@@ -4,8 +4,17 @@
   "description": "a project to learn docker",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "start": "node build/index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Shashank",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "fastify": "^3.17.0"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.2"
+  }
 }
