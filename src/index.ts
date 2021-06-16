@@ -18,7 +18,7 @@ server.get("/", async (req, reply) => {
   }
 });
 
-server.listen(3000, "0.0.0.0", (err, address) => {
+server.listen(process.env.PORT, "0.0.0.0", (err, address) => {
   if (err) {
     console.error(err);
   }

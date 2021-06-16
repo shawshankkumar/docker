@@ -8,11 +8,10 @@ RUN yarn
 
 COPY . .
 
-ENV PORT=9000 \ 
-    PORT1=3000
+ENV PORT=9000 
 
 RUN yarn build
 
-EXPOSE 9000 3000
+EXPOSE 9000 
 
 CMD ["yarn","start"]
