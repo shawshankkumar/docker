@@ -1,20 +1,15 @@
 import fastify from "fastify";
-import axios from "axios";
+import { nanoid } from "nanoid";
 
 const server = fastify();
 
 server.get("/", async (req, reply) => {
   try {
-    const longUrl = await axios.get(
-      `https://itnachota.herokuapp.com/api/fetch/link?code=${
-        (req.query as any).code
-      }`
-    );
-    reply.send(longUrl.data);
+    reply.status(200);
+    return { password: nanoid(), success: true };
   } catch (err) {
-    console.error(err.response.data || err.message);
-    reply.status(err.response.status || 500);
-    return err.response.data || err.message;
+    reply.status(500);
+    return { success: false, message: "failed to create a secure password" };
   }
 });
 
