@@ -11,8 +11,8 @@
   "author": "Shashank",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.1",
-    "fastify": "^3.17.0"
+    "fastify": "^3.17.0",
+    "nanoid": "^3.1.23"
   },
   "devDependencies": {
     "@types/node": "^15.12.2"
